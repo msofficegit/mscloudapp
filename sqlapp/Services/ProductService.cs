@@ -1,23 +1,4 @@
-﻿using sqlapp.Models;
-using System.Data.SqlClient;
-
-namespace sqlapp.Services
-{
-
-    // This service will interact with our Product data in the SQL database
-    public class ProductService : IProductService
-    {
-
-     private readonly IConfiguration _configuration;
-     public ProductService(IConfiguration configuration)
-        {
-        _configuration = configuration;
-        }
-        
-        private SqlConnection GetConnection()
-        {
-            return new SqlConnection(_configuration.GetConnectionString("mssqlsvr01constring");
-        }
+﻿: IProductService
         public List<Product> GetProducts()
         {
             List<Product> _product_lst = new List<Product>();
